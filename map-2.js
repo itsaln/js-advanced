@@ -1,21 +1,18 @@
 'use strict'
 
 const wetherMap = new Map([
-  ['London', 10],
-  ['Moskow', 7],
-  ['Paris', 14]
+  ['London', '10'],
+  ['Moscow', '7']
 ])
 
-for (const [key, value] of wetherMap) {
-  console.log(key)
-  console.log(value)
+console.log(wetherMap)
+
+const wetherObject = {
+  london: 10,
+  moscow: 7,
+  paris: 14
 }
 
-// wetherMap.forEach((value, key) => {
-//   console.log(value)
-//   console.log(key)
-// })
-
-console.log([...wetherMap])
-console.log([...wetherMap.keys()])
-console.log([...wetherMap.values()])
+console.log(Object.entries(wetherObject))
+const wetherMap2 = new Map(Object.entries(wetherObject))
+console.log(wetherMap2.size)
